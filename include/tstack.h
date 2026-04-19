@@ -1,15 +1,15 @@
 #include <iostream>
 
-template<typename T, int len>
+template<typename T, int lenOfArr>
 class TStack {
  private:
-  T arr[len];
+  T arr[lenOfArr];
   int top;
  public:
   TStack(): top(-1) {}
   int getSize() const { return top + 1; }
   void push(T x) {
-    if (top + 1 >= len) std::cout << "Out of size" << std::endl;
+    if (top + 1 >= lenOfArr) std::cout << "Out of size" << std::endl;
     else arr[++top] = x;
   }
   T pop() {

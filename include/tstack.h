@@ -19,10 +19,9 @@ class TStack {
     if (top != -1) return arr[top--];
     else return T();
   }
-
-#endif INCLUDE_TSTACK_H_
   T getValue() const {
     if (top != -1) return arr[top];
     else return T();
   }
 };
+#endif //INCLUDE_TSTACK_H_

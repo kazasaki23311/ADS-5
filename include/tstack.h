@@ -1,15 +1,17 @@
+// Copyright 2025 NNTU-CS
+#ifndef INCLUDE_TSTACK_H_
 #include <iostream>
 
-template<typename T, int lenOfArr>
+template<typename T, int klenOfArr>
 class TStack {
  private:
-  T arr[lenOfArr];
+  T arr[klenOfArr];
   int top;
  public:
   TStack(): top(-1) {}
   int getSize() const { return top + 1; }
   void push(T x) {
-    if (top + 1 >= lenOfArr) std::cout << "Out of size" << std::endl;
+    if (top + 1 >= klenOfArr) std::cout << "Out of size" << std::endl;
     else arr[++top] = x;
   }
   T pop() {

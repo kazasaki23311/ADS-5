@@ -1,5 +1,4 @@
-#ifndef INCLUDE_TSTACK_H_
-#define INCLUDE_TSTACK_H_
+#include <iostream>
 
 template<typename T, int len>
 class TStack {
@@ -22,5 +21,3 @@ class TStack {
     else return T();
   }
 };
-
-#endif  // INCLUDE_TSTACK_H_

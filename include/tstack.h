@@ -1,10 +1,26 @@
-// Copyright 2021 NNTU-CS
 #ifndef INCLUDE_TSTACK_H_
 #define INCLUDE_TSTACK_H_
 
-template<typename T, int size>
+template<typename T, int len>
 class TStack {
-  // добавьте код стека
+ private:
+  T arr[len];
+  int top;
+ public:
+  TStack(): top(-1) {}
+  int getSize() const { return top + 1; }
+  void push(T x) {
+    if (top + 1 >= len) std::cout << "Out of size" << std::endl;
+    else arr[++top] = x;
+  }
+  T pop() {
+    if (top != -1) return arr[top--];
+    else return T();
+  }
+  T getValue() const {
+    if (top != -1) return arr[top];
+    else return T();
+  }
 };
 
 #endif  // INCLUDE_TSTACK_H_
